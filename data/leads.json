@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "created_at": "2024-05-20T10:30:00Z",
+    "name": "Rahul Sharma",
+    "email": "rahul@example.com",
+    "phone": "+91 9876543210",
+    "company": "Steel Industries Ltd",
+    "message": "Interested in bulk coal procurement.",
+    "status": "new"
+  },
+  {
+    "id": "2",
+    "created_at": "2024-05-21T14:15:00Z",
+    "name": "Priya Desai",
+    "email": "priya.d@cementco.in",
+    "phone": "+91 8765432109",
+    "company": "Ultra Cement",
+    "message": "Looking for logistics support in MP.",
+    "status": "contacted"
+  },
+  {
+    "id": "3",
+    "created_at": "2024-05-22T09:00:00Z",
+    "name": "Amit Kumar",
+    "email": "amitk@powergen.com",
+    "phone": "+91 7654321098",
+    "company": "PowerGen India",
+    "message": "Need industrial fuel specifications.",
+    "status": "new"
+  },
+  {
+    "id": "4",
+    "created_at": "2024-05-18T16:45:00Z",
+    "name": "Neha Gupta",
+    "email": "neha@logistics.in",
+    "phone": "+91 6543210987",
+    "company": "",
+    "message": "Partnership inquiry.",
+    "status": "archived"
+  },
+  {
+    "id": "5",
+    "created_at": "2024-05-22T11:20:00Z",
+    "name": "Vikram Singh",
+    "email": "vsingh@manufacturing.com",
+    "phone": "+91 9988776655",
+    "company": "Singh Manufacturing",
+    "message": "Quote required for 500 MT Coal.",
+    "status": "new"
+  },
+  {
+    "id": "12085a68-7fa6-4fed-aece-2d4eec21f317",
+    "created_at": "2026-05-22T09:32:40.584Z",
+    "name": "Deepanshu Dixit",
+    "email": "deepanshu6255@gmail.com",
+    "phone": "7898075795",
+    "company": "",
+    "message": "Help me find the right resources.",
+    "status": "new"
+  }
+]
