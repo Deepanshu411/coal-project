@@ -12,9 +12,9 @@ export interface Lead {
 export interface AnalyticsEvent {
   id: string;
   created_at: string;
-  page_path: string;
   session_id: string;
-  duration_seconds: number;
+  event_type: string;
+  page_path: string;
 }
 
 export interface AnalyticsSummary {
