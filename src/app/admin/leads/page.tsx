@@ -47,7 +47,7 @@ export default function LeadsPage() {
       });
 
       if (response.ok) {
-        setLeads(leads.map(lead => lead.id === leadId ? { ...lead, status: newStatus } : lead));
+        setLeads(leads.map(lead => lead.id === leadId ? { ...lead, status: newStatus as "new" | "contacted" | "archived" } : lead));
       } else {
         console.error("Failed to update status");
       }
