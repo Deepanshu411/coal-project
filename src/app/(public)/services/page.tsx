@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Factory, Truck, Train, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Pickaxe, Flame, Droplets, Settings2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,36 +9,36 @@ import Image from "next/image";
 export default function ServicesPage() {
   const services = [
     {
-      id: "coal-trading",
-      title: "Coal Trading",
-      icon: Factory,
+      id: "rom-coal",
+      title: "Indigenous ROM Coal",
+      icon: Pickaxe,
       image: "/images/service-coal-trading.png",
-      description: "We supply premium grade coal to diverse industries. Our expansive sourcing network ensures you receive the exact energetic specifications required for your operations, without compromise.",
-      features: ["Premium Grade Coal Sourcing", "Custom Specifications matching", "Uninterrupted Supply Guarantee", "Transparent Pricing Models"],
+      description: "Run-of-mine coal sourced directly from premier Indian coalfields. We supply ROM coal in various grades, tailored to meet the exact calorific, ash, and moisture specifications required by your operations.",
+      features: ["Multiple grade options (G4–G14)", "Direct mine-gate procurement", "Consistent calorific value", "Transparent quality reporting"],
     },
     {
-      id: "logistics",
-      title: "Logistics & Transport",
-      icon: Truck,
-      image: "/images/service-logistics.png",
-      description: "Our dedicated logistics division orchestrates complex transport routes across India. We manage end-to-end delivery from mining hubs to your facilities, minimizing transit times and costs.",
-      features: ["Multi-modal Transport (Rail & Road)", "Real-time Tracking", "Route Optimization", "Safe & Compliant Handling"],
-    },
-    {
-      id: "industrial-fuel",
-      title: "Industrial Fuel",
-      icon: Train,
+      id: "steam-coal",
+      title: "Steam Coal",
+      icon: Flame,
       image: "/images/service-industrial-fuel.png",
-      description: "Beyond coal, we provide a consistent supply of specialized industrial fuels tailored for heavy manufacturing, power generation, and cement industries.",
-      features: ["Diverse Fuel Portfolio", "Quality Assurance Testing", "Bulk Supply Capabilities", "Strategic Stockpiling"],
+      description: "High-quality steam coal optimized for power generation, cement manufacturing, and industrial boiler applications. Our steam coal is sourced to deliver maximum thermal efficiency.",
+      features: ["Optimized for combustion efficiency", "Low moisture and ash content", "Bulk supply capabilities", "Suitable for power and cement sectors"],
     },
     {
-      id: "supply-chain",
-      title: "Supply Chain Support",
-      icon: ShieldCheck,
+      id: "washed-coal",
+      title: "Washed Coal",
+      icon: Droplets,
+      image: "/images/service-logistics.png",
+      description: "Beneficiated coal processed through washeries to reduce ash content and improve overall quality. Ideal for premium industrial applications requiring higher-grade fuel.",
+      features: ["Significantly reduced ash percentage", "Higher calorific value per ton", "Premium grade certification", "Ideal for sponge iron and steel"],
+    },
+    {
+      id: "custom-solutions",
+      title: "Customized Coal Solutions",
+      icon: Settings2,
       image: "/images/service-supply-chain.png",
-      description: "We don't just supply; we partner. Our supply chain experts integrate with your procurement teams to streamline processes, mitigate risks, and enhance overall operational efficiency.",
-      features: ["Procurement Consulting", "Risk Mitigation Strategies", "Inventory Management", "Regulatory Compliance Assistance"],
+      description: "Tailored coal blending and specification matching designed around the unique requirements of your industrial process. Our team works closely with your procurement department to deliver exactly what you need.",
+      features: ["Custom blending to specification", "Flexible volume commitments", "Dedicated procurement support", "End-to-end quality assurance"],
     },
   ];
 
@@ -55,7 +55,7 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Services & <span className="text-primary-500">Industries</span>
+            Our <span className="text-primary-500">Products & Services</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -63,13 +63,13 @@ export default function ServicesPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
           >
-            Tailored energy solutions and logistics designed to meet the rigorous demands of modern industry.
+            Quality coal products and tailored energy solutions designed to meet the rigorous demands of modern industry.
           </motion.p>
         </div>
       </section>
 
-      {/* Detailed Services */}
-      <section className="py-24 bg-white dark:bg-background">
+      {/* Detailed Products */}
+      <section className="py-20 md:py-28 bg-white dark:bg-background">
         <div className="container mx-auto px-4 md:px-8 space-y-24">
           {services.map((service, index) => (
             <div 
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                   <div className="h-8 w-8 rounded-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
                     <service.icon className="h-4 w-4" />
                   </div>
-                  Service {index + 1}
+                  Product {index + 1}
                 </div>
                 
                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">

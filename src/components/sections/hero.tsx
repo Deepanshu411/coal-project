@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -47,39 +47,42 @@ export function Hero() {
         >
           <motion.div variants={itemVariants} className="inline-block mb-4 rounded-full bg-slate-800/50 border border-slate-700 px-3 py-1 backdrop-blur-sm">
             <span className="text-sm font-medium text-primary-400">
-              Upholding transparency. Ensuring uninterrupted supply.
+              Promoters with 35+ Years of Combined Experience
             </span>
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-tight"
           >
-            Powering Progress <br />
+            Reliable Indigenous{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
-              from the Earth.
-            </span>
+              Coal Supply
+            </span>{" "}
+            <br className="hidden sm:block" />
+            Solutions Across India
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl font-light"
+            className="text-base sm:text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl font-light"
           >
-            Driven by Reliability. Fuelled by Service. We are your trusted partner in comprehensive coal sourcing, logistics, and industrial fuel supply chain management.
+            Backed by 35+ years of industry expertise, Shree Aadinath Coal Resources LLP delivers quality coal with dependable sourcing, efficient logistics, and customer-focused service.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-            <Link href="/services">
+            <Link href="/contact-us">
               <Button size="lg" className="w-full sm:w-auto text-base group">
-                Explore Our Services
+                Request a Quote
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/contact-us">
+            <a href="/Shree Aadinath Coal Resorces LLP Profile.pdf" download>
               <Button size="lg" variant="outline" className="w-full sm:w-auto text-base text-slate-200 border-slate-700 hover:bg-slate-800 dark:hover:text-white">
-                Contact the Team
+                <Download className="mr-2 h-4 w-4" />
+                Download Company Profile
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>

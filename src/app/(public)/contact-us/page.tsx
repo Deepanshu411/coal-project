@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
 export default function ContactUsPage() {
@@ -32,7 +32,7 @@ export default function ContactUsPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-24 bg-slate-50 dark:bg-background">
+      <section className="py-20 md:py-28 bg-slate-50 dark:bg-background">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8">
             
@@ -121,6 +121,36 @@ export default function ContactUsPage() {
           </div>
         </div>
       </section>
+
+      {/* Google Maps Embed */}
+      <section className="bg-white dark:bg-slate-900">
+        <div className="container mx-auto px-4 md:px-8 pb-16">
+          <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2641!2d79.0882!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sJai%20Jinendra%20Tower%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Shree Aadinath Coal Resources LLP Office Location"
+              className="w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/917083812435?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20coal%20supply%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="h-7 w-7" />
+      </a>
     </div>
   );
 }

@@ -8,11 +8,10 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-import { AnalyticsTracker } from "@/components/analytics-tracker";
-
 export const metadata: Metadata = {
   title: "Shree Aadinath Coal Resources LLP",
-  description: "Powering Progress from the Earth. Driven by Reliability. Fuelled by Service.",
+  description:
+    "Reliable Indigenous Coal Supply Solutions Across India. Backed by 35+ years of industry expertise, Shree Aadinath Coal Resources LLP delivers quality coal with dependable sourcing, efficient logistics, and customer-focused service.",
 };
 
 export default function RootLayout({
@@ -34,7 +33,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <AnalyticsTracker />
         </ThemeProvider>
       </body>
     </html>

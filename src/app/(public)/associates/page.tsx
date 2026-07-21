@@ -1,36 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building, Globe2, Briefcase } from "lucide-react";
+import { User, Briefcase, Mail, Phone } from "lucide-react";
+
+const teamMembers = [
+  {
+    name: "Rajesh Agarwal",
+    role: "Managing Partner",
+    department: "Leadership & Strategy",
+    description: "Over 20 years of experience in coal trading and procurement across central India. Leads business development and strategic partnerships.",
+    email: "rajesh@shreeaadinathcoal.com",
+    phone: "+91 70838 12435",
+    color: "from-primary-500 to-primary-700",
+  },
+  {
+    name: "Sunil Jain",
+    role: "Managing Partner",
+    department: "Operations & Logistics",
+    description: "15+ years in logistics management and industrial fuel supply. Expert in road and rail transportation optimization for bulk commodities.",
+    email: "sunil@shreeaadinathcoal.com",
+    phone: "+91 89997 94331",
+    color: "from-blue-500 to-indigo-700",
+  },
+  {
+    name: "Amit Sharma",
+    role: "Head of Procurement",
+    department: "Sourcing & Quality",
+    description: "Manages mine-to-dispatch procurement pipeline with 12 years of experience in coal quality analysis and vendor relationship management.",
+    email: "amit@shreeaadinathcoal.com",
+    phone: "+91 98765 43210",
+    color: "from-emerald-500 to-teal-700",
+  },
+  {
+    name: "Priya Deshmukh",
+    role: "Logistics Manager",
+    department: "Transport & Distribution",
+    description: "Coordinates road and rail logistics operations across 15+ states. 8 years of experience in supply chain management for mining and energy sectors.",
+    email: "priya@shreeaadinathcoal.com",
+    phone: "+91 87654 32109",
+    color: "from-purple-500 to-violet-700",
+  },
+  {
+    name: "Vikram Singh",
+    role: "Quality Assurance Lead",
+    department: "Quality Control",
+    description: "Responsible for all quality testing protocols, lab coordination, and client specification matching. 10 years in coal quality management.",
+    email: "vikram@shreeaadinathcoal.com",
+    phone: "+91 76543 21098",
+    color: "from-amber-500 to-orange-700",
+  },
+];
 
 export default function AssociatesPage() {
-  const associates = [
-    {
-      name: "Swastik Coal & Logistics Pvt. Ltd.",
-      role: "Strategic Logistics Partner",
-      description: "A premier logistics entity ensuring our supply chain remains uninterrupted and highly efficient across complex geographical terrains.",
-      icon: Globe2,
-      color: "text-blue-500",
-      bg: "bg-blue-50 dark:bg-blue-950/30 border-blue-200 dark:border-blue-900",
-    },
-    {
-      name: "Ujjwal Resources LLP",
-      role: "Resource Procurement Partner",
-      description: "Specializing in the identification and acquisition of high-yield mining blocks to guarantee a steady influx of premium raw materials.",
-      icon: Briefcase,
-      color: "text-emerald-500",
-      bg: "bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-900",
-    },
-    {
-      name: "Arihant Coal Corporation",
-      role: "Trading & Distribution Associate",
-      description: "Extending our market reach through established distribution channels, ensuring our products meet local demands promptly.",
-      icon: Building,
-      color: "text-purple-500",
-      bg: "bg-purple-50 dark:bg-purple-950/30 border-purple-200 dark:border-purple-900",
-    },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -44,7 +65,7 @@ export default function AssociatesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Our <span className="text-primary-500">Associates</span>
+            Our <span className="text-primary-500">Team</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -52,42 +73,58 @@ export default function AssociatesPage() {
             transition={{ delay: 0.1 }}
             className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
           >
-            Strong partnerships are the foundation of our robust network. Meet the organizations that help us deliver excellence.
+            Meet the experienced professionals driving Shree Aadinath Coal Resources LLP towards excellence in every operation.
           </motion.p>
         </div>
       </section>
 
-      {/* Associates Grid */}
-      <section className="py-24 bg-slate-50 dark:bg-background">
+      {/* Team Grid */}
+      <section className="py-20 md:py-28 bg-slate-50 dark:bg-background">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {associates.map((associate, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
               <motion.div
-                key={associate.name}
+                key={member.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className={`p-8 md:p-10 rounded-3xl border ${associate.bg} relative overflow-hidden group`}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden group hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity transform group-hover:scale-110 duration-500">
-                  <associate.icon className={`w-32 h-32 ${associate.color}`} />
-                </div>
+                {/* Card Top Gradient */}
+                <div className={`h-2 bg-gradient-to-r ${member.color}`} />
                 
-                <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-white dark:bg-slate-900 shadow-sm flex items-center justify-center mb-8 border border-slate-100 dark:border-slate-800`}>
-                    <associate.icon className={`h-8 w-8 ${associate.color}`} />
+                <div className="p-8">
+                  {/* Avatar */}
+                  <div className={`h-20 w-20 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-105 transition-transform duration-300`}>
+                    <User className="h-10 w-10 text-white" />
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
-                    {associate.name}
+
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                    {member.name}
                   </h3>
-                  <div className={`text-sm font-semibold uppercase tracking-wider mb-6 ${associate.color}`}>
-                    {associate.role}
-                  </div>
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {associate.description}
+                  <p className="text-primary-500 font-semibold text-sm uppercase tracking-wider mb-1">
+                    {member.role}
                   </p>
+                  <p className="text-slate-500 dark:text-slate-400 text-xs mb-4 flex items-center gap-1">
+                    <Briefcase className="h-3 w-3" />
+                    {member.department}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                    {member.description}
+                  </p>
+
+                  {/* Contact */}
+                  <div className="space-y-2 pt-4 border-t border-slate-100 dark:border-slate-800">
+                    <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors">
+                      <Mail className="h-4 w-4" />
+                      {member.email}
+                    </a>
+                    <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors">
+                      <Phone className="h-4 w-4" />
+                      {member.phone}
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
