@@ -1,12 +1,12 @@
 export default function TermsOfServicePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <section className="bg-slate-950 dark:bg-slate-900 py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-slate-50 dark:bg-slate-900 py-20 md:py-28 relative overflow-hidden">
         <div className="container relative z-10 mx-auto px-4 md:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-4">
             Terms of <span className="text-primary-500">Service</span>
           </h1>
-          <p className="text-slate-400">Last updated: July 2026</p>
+          <p className="text-slate-600 dark:text-slate-400">Last updated: July 2026</p>
         </div>
       </section>
 

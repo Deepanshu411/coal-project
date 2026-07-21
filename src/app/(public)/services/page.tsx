@@ -45,7 +45,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-slate-950 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
+      <section className="bg-slate-50 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl rounded-full bg-primary-600/10 blur-[120px] pointer-events-none" />
         </div>
@@ -53,7 +53,7 @@ export default function ServicesPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
           >
             Our <span className="text-primary-500">Products & Services</span>
           </motion.h1>
@@ -61,7 +61,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto"
           >
             Quality coal products and tailored energy solutions designed to meet the rigorous demands of modern industry.
           </motion.p>

@@ -33,7 +33,7 @@ const products = [
 
 export function Products() {
   return (
-    <section className="py-20 md:py-28 bg-white dark:bg-background">
+    <section id="services" className="py-20 md:py-28 bg-white dark:bg-background">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-sm font-semibold text-primary-500 uppercase tracking-wider mb-2">

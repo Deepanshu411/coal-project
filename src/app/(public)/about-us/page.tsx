@@ -32,7 +32,7 @@ export default function AboutUsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Page Header */}
-      <section className="bg-slate-950 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
+      <section className="bg-slate-50 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-600/20 blur-3xl pointer-events-none" />
         </div>
@@ -40,7 +40,7 @@ export default function AboutUsPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
           >
             About <span className="text-primary-500">Us</span>
           </motion.h1>
@@ -48,7 +48,7 @@ export default function AboutUsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto"
           >
             Discover the driving force behind Shree Aadinath Coal Resources LLP. We are committed to powering your progress.
           </motion.p>

@@ -8,7 +8,7 @@ export default function ContactUsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-slate-950 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
+      <section className="bg-slate-50 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-30">
           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary-500/30 via-transparent to-transparent" />
         </div>
@@ -16,7 +16,7 @@ export default function ContactUsPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
           >
             Contact <span className="text-primary-500">Us</span>
           </motion.h1>
@@ -24,7 +24,7 @@ export default function ContactUsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto"
           >
             Get in touch with our team to discuss your energy requirements, logistics needs, or partnership opportunities.
           </motion.p>
@@ -146,7 +146,7 @@ export default function ContactUsPage() {
         href="https://wa.me/917083812435?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20coal%20supply%20services."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        className="fixed bottom-28 md:bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="h-7 w-7" />

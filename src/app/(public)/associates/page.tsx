@@ -55,7 +55,7 @@ export default function AssociatesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-slate-950 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
+      <section className="bg-slate-50 dark:bg-slate-900 py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/20 via-transparent to-transparent" />
         </div>
@@ -63,7 +63,7 @@ export default function AssociatesPage() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6"
           >
             Our <span className="text-primary-500">Team</span>
           </motion.h1>
@@ -71,7 +71,7 @@ export default function AssociatesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mx-auto"
           >
             Meet the experienced professionals driving Shree Aadinath Coal Resources LLP towards excellence in every operation.
           </motion.p>

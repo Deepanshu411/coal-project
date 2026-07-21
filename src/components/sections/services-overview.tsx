@@ -69,7 +69,7 @@ const stats = [
 
 export function ExpertiseStats() {
   return (
-    <section className="py-20 md:py-28 bg-slate-950 dark:bg-slate-900 relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px]" />
@@ -78,13 +78,13 @@ export function ExpertiseStats() {
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-sm font-semibold text-primary-400 uppercase tracking-wider mb-2">
+          <h2 className="text-sm font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-2">
             Our Expertise
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h3 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Numbers That Define Our Commitment
           </h3>
-          <p className="text-lg text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             A snapshot of our capabilities, built on decades of experience and an unwavering focus on quality service delivery.
           </p>
         </div>
@@ -97,18 +97,18 @@ export function ExpertiseStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 backdrop-blur-sm transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-primary-200 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all duration-300"
             >
               <div className={`h-14 w-14 rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="h-7 w-7 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2">
                 <AnimatedCounter target={stat.value} suffix={stat.suffix} />
               </div>
-              <h4 className="text-lg font-semibold text-white mb-2">
+              <h4 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
                 {stat.title}
               </h4>
-              <p className="text-slate-400 text-sm">
+              <p className="text-slate-600 dark:text-slate-400 text-sm">
                 {stat.description}
               </p>
             </motion.div>

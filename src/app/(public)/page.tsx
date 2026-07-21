@@ -10,6 +10,7 @@ import { QualityAssurance } from "@/components/sections/quality-assurance";
 import { Leadership } from "@/components/sections/leadership";
 import { Infrastructure } from "@/components/sections/infrastructure";
 import { Values } from "@/components/sections/values";
+import { HomeContact } from "@/components/sections/home-contact";
 import { FAQ } from "@/components/sections/faq";
 
 export default function HomePage() {
@@ -28,6 +29,7 @@ export default function HomePage() {
       <Infrastructure />
       <Values />
       <FAQ />
+      <HomeContact />
     </>
   );
 }

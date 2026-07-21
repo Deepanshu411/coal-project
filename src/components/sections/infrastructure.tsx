@@ -43,7 +43,7 @@ const infraItems = [
 
 export function Infrastructure() {
   return (
-    <section className="py-20 md:py-28 bg-slate-950 dark:bg-slate-900 relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px]" />
@@ -52,13 +52,13 @@ export function Infrastructure() {
 
       <div className="container relative z-10 mx-auto px-4 md:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-sm font-semibold text-primary-400 uppercase tracking-wider mb-2">
+          <h2 className="text-sm font-semibold text-primary-500 dark:text-primary-400 uppercase tracking-wider mb-2">
             Infrastructure & Network
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          <h3 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
             Built for Scale and Reliability
           </h3>
-          <p className="text-lg text-slate-400">
+          <p className="text-lg text-slate-600 dark:text-slate-400">
             Our infrastructure and partnerships form the backbone of a coal supply chain that delivers consistently, across India.
           </p>
         </div>
@@ -71,13 +71,13 @@ export function Infrastructure() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 backdrop-blur-sm transition-all duration-300 group"
+              className="p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-primary-200 dark:hover:border-white/20 shadow-sm dark:shadow-none transition-all duration-300 group"
             >
               <div className={`h-12 w-12 rounded-xl ${item.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 <item.icon className={`h-6 w-6 ${item.color}`} />
               </div>
-              <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-              <p className="text-sm text-slate-400">{item.description}</p>
+              <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.title}</h4>
+              <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -87,18 +87,18 @@ export function Infrastructure() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm"
+          className="mt-16 p-8 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 shadow-sm dark:shadow-none"
         >
-          <h4 className="text-lg font-bold text-white mb-4 text-center">Our Associate Partners</h4>
+          <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-4 text-center">Our Associate Partners</h4>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { name: "Swastik Coal & Logistics Pvt. Ltd.", role: "Strategic Logistics Partner" },
               { name: "Ujjwal Resources LLP", role: "Resource Procurement Partner" },
               { name: "Arihant Coal Corporation", role: "Trading & Distribution Associate" },
             ].map((associate) => (
-              <div key={associate.name} className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-                <p className="font-semibold text-white text-sm">{associate.name}</p>
-                <p className="text-xs text-primary-400 mt-1">{associate.role}</p>
+              <div key={associate.name} className="p-4 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-center">
+                <p className="font-semibold text-slate-900 dark:text-white text-sm">{associate.name}</p>
+                <p className="text-xs text-primary-500 dark:text-primary-400 mt-1">{associate.role}</p>
               </div>
             ))}
           </div>
