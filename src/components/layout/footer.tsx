@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/40 text-muted-foreground">
+    <footer className="border-t bg-muted/40 text-muted-foreground pb-28 md:pb-0">
       <div className="container mx-auto px-4 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="sm:col-span-2 md:col-span-2">
@@ -30,19 +30,19 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-primary-500 transition-colors">Home</Link>
+                <Link href="/#home" className="hover:text-primary-500 transition-colors">Home</Link>
               </li>
               <li>
-                <Link href="/about-us" className="hover:text-primary-500 transition-colors">About Us</Link>
+                <Link href="/#about" className="hover:text-primary-500 transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-primary-500 transition-colors">Products & Services</Link>
+                <Link href="/#services" className="hover:text-primary-500 transition-colors">Products & Services</Link>
               </li>
               <li>
-                <Link href="/associates" className="hover:text-primary-500 transition-colors">Our Team</Link>
+                <Link href="/#team" className="hover:text-primary-500 transition-colors">Our Team</Link>
               </li>
               <li>
-                <Link href="/contact-us" className="hover:text-primary-500 transition-colors">Contact</Link>
+                <Link href="/#contact" className="hover:text-primary-500 transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
