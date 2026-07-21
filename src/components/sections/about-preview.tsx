@@ -44,12 +44,7 @@ export function AboutPreview() {
               </p>
             </div>
 
-            <div className="mt-8">
-              <Link href="/about-us" className="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600 font-semibold transition-colors group">
-                Learn More About Us
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            {/* Link removed as content is unified in SPA */}
           </motion.div>
 
           {/* Right — Image */}

@@ -71,7 +71,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact-us">
+            <Link href="/#contact">
               <Button size="lg" className="w-full sm:w-auto text-base group">
                 Request a Quote
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

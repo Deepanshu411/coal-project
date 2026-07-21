@@ -76,13 +76,7 @@ export function Products() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-1 text-primary-500 hover:text-primary-600 text-sm font-semibold transition-colors group/link"
-                >
-                  View Details
-                  <ArrowRight className="h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform" />
-                </Link>
+                {/* Link removed as content is unified in SPA */}
               </div>
             </motion.div>
           ))}

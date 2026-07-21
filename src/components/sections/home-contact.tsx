@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
 export function HomeContact() {
@@ -15,17 +16,105 @@ export function HomeContact() {
             Ready to Partner with Us?
           </h3>
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            Send us a message below and our team will get back to you shortly to discuss your coal supply needs.
+            Get in touch with our team to discuss your energy requirements, logistics needs, or partnership opportunities.
           </p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+          {/* Contact Information */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-2 space-y-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="mt-1 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm text-primary-500">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Head Office</h4>
+                <p className="text-slate-600 dark:text-slate-400">
+                  51-C, Jai Jinendra Building<br />
+                  Nagpur, Maharashtra<br />
+                  India
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="mt-1 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm text-primary-500">
+                <Phone className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Phone</h4>
+                <div className="text-slate-600 dark:text-slate-400 space-y-1">
+                  <p><a href="tel:+917083812435" className="hover:text-primary-500 transition-colors">+91 70838 12435</a></p>
+                  <p><a href="tel:+918999794331" className="hover:text-primary-500 transition-colors">+91 89997 94331</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="mt-1 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm text-primary-500">
+                <Mail className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Email</h4>
+                <p className="text-slate-600 dark:text-slate-400">
+                  <a href="mailto:admin@shreeaadinathcoal.com" className="hover:text-primary-500 transition-colors">
+                    admin@shreeaadinathcoal.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="mt-1 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm text-primary-500">
+                <Clock className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Business Hours</h4>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Monday - Saturday<br />
+                  9:00 AM - 6:00 PM IST
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="lg:col-span-3 lg:pl-10"
+          >
+            <ContactForm />
+          </motion.div>
+        </div>
+
+        {/* Google Maps Embed */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm"
         >
-          <ContactForm />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2641!2d79.0882!3d21.1458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sJai%20Jinendra%20Tower%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Shree Aadinath Coal Resources LLP Office Location"
+            className="w-full"
+          />
         </motion.div>
       </div>
     </section>

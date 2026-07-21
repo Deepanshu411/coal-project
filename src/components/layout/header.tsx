@@ -33,7 +33,7 @@ export function Header() {
         });
       },
       {
-        rootMargin: "-20% 0px -60% 0px", // Trigger when section is in the middle of screen
+        rootMargin: "-40% 0px -40% 0px", // Trigger when section crosses the middle of the screen
         threshold: 0,
       }
     );
@@ -96,7 +96,7 @@ export function Header() {
       </header>
 
       {/* Mobile Bottom Navigation (Glassmorphism) */}
-      <div className="md:hidden fixed bottom-6 left-4 right-4 z-50 flex items-center justify-between bg-white/70 dark:bg-slate-950/70 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/50 rounded-2xl shadow-xl p-2 px-4">
+      <div className="md:hidden fixed bottom-6 left-4 right-4 z-50 flex items-center justify-between bg-white/40 dark:bg-slate-950/40 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] p-2 px-4">
         {navLinks.map((link) => {
           const active = isLinkActive(link.sectionId, link.href);
           return (
