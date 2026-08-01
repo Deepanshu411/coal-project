@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { User, Briefcase, Target, TrendingUp } from "lucide-react";
+import Image from "next/image";
+import { Briefcase, Target, TrendingUp } from "lucide-react";
 
 const leaders = [
   {
     name: "Vaibhav A. Jain",
+    image: "/images/vaibhav_jain.jpg",
     role: "Managing Partner",
     background:
       "Vaibhav A. Jain is the Managing Partner of Shree Aadinath Coal Resources LLP, providing strategic leadership across business development, commercial operations, procurement, and supply chain management. With over a decade of entrepreneurial and leadership experience, he has established a strong track record of driving business growth, operational excellence, and long-term customer partnerships.",
@@ -15,6 +17,7 @@ const leaders = [
   },
   {
     name: "Ajay Jain",
+    image: "/images/ajay_jain.jpg",
     role: "Partner",
     background:
       "Ajay Jain is a Partner at Shree Aadinath Coal Resources LLP, bringing over 30 years of experience in the Indian coal trading and energy commodities sector. A seasoned industry professional, he provides strategic direction across commercial operations, procurement, business development, and supply chain management.",
@@ -24,6 +27,7 @@ const leaders = [
   },
   {
     name: "Pankaj Dixit",
+    image: "/images/pankaj_dixit.JPG",
     role: "Marketing Head",
     background:
       "Pankaj Dixit serves as the Marketing Head at Shree Aadinath Coal Resources LLP, bringing over 40 years of distinguished experience in India's domestic coal industry. He leads the company's marketing function with a strategic focus on business development, customer engagement, and market expansion.",
@@ -59,9 +63,15 @@ export function Leadership() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col"
             >
-              {/* Avatar placeholder */}
-              <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center mb-6 shadow-lg">
-                <User className="h-10 w-10 text-white" />
+              {/* Profile photo */}
+              <div className="h-24 w-24 rounded-2xl overflow-hidden mb-6 shadow-lg border-2 border-slate-200 dark:border-slate-700">
+                <Image
+                  src={leader.image}
+                  alt={leader.name}
+                  width={96}
+                  height={96}
+                  className="h-full w-full object-cover"
+                />
               </div>
 
               <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
